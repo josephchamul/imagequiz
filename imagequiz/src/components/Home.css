@@ -10,13 +10,14 @@
   border: 1px solid gray;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 3px 3px 25px gray;
+  box-shadow: 1px 1px 25px gray;
 }
 .images {
   background-color: white;
   width: 700px;
   margin: auto;
   margin-top: 100px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
@@ -26,10 +27,11 @@ img {
 .loginButton {
   margin: 30px 30px 0px 0px;
   color: white;
+  font-size: 18px;
 }
 
 button {
-  background-color: #86878a;
+  background-color: #9c9c9c;
   color: white;
   border: none;
   padding: 10px 10px 10px 10px;
@@ -38,13 +40,18 @@ button {
 }
 
 .signin {
-  background-color: #86878a;
+  background-color: #9c9c9c;
   color: white;
   margin: auto;
   margin-top: 200px;
   width: 155px;
   padding: 10px 10px 12px 10px;
   border-radius: 10px 10px 10px 10px;
-  box-shadow: 3px 3px 25px gray;
+  box-shadow: 2px 2px 25px gray;
   font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid gray;
+}
+
+.flowerName {
+  word-spacing: 115px;
 }

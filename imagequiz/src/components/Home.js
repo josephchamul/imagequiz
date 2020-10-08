@@ -62,10 +62,12 @@ class Home extends React.Component {
           <img src={require("./images/daffodil.png")} alt="daffodil" />
           <img src={require("./images/daisy.jpg")} alt="daisy" />
           <img src={require("./images/lily.jpg")} alt="lily" />
+          <div className="flowerName">Cherryblossom Daffodil Daisy Lily</div>
           <img src={require("./images/rose.png")} alt="rose" />
           <img src={require("./images/sunflower.png")} alt="sunflower" />
           <img src={require("./images/tulip.png")} alt="tulip" />
           <img src={require("./images/waterlily.png")} alt="waterlily" />
+          <div className="flowerName">Rose Sunflower Tulip Waterlily</div>
         </div>
       </div>
     );
