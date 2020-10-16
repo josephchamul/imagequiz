@@ -1,59 +1,52 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import server from "./ServerInterface/server";
+import Entry from "./Entry";
 import "./Home.css";
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { username: "", showLoginForm: false, authenticated: false };
+    this.state = { username: "", entries: [], cursor: 0 };
   }
-  login = () => {
-    this.setState({
-      showLoginForm: true,
-    });
-  };
-  onSubmit = (event) => {
-    if (this.state.username.trim().length > 0) {
-      this.setState({ authenticated: true });
-    }
-    event.preventDefault();
+
+  body = () => {
+    const { entries, cursor } = this.state;
+    return (
+      <div className="content">
+        {entries.length > 0 ? (
+          <div>
+            <Entry entry={entries[cursor]} />
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
+    );
   };
 
-  onChange = (event) => {
-    const value = event.target.value;
-    const name = event.target.name;
-    this.setState({ [name]: value });
-  };
+  componentDidMount() {
+    const entries = server.fetchEntries();
+    this.setState({ entries: entries });
+  }
 
   render() {
-    if (!this.state.authenticated && this.state.showLoginForm) {
-      return (
-        <div>
-          <div className="title">Image Quiz</div>
-          <div className="signin">
-            <form onSubmit={this.onSubmit}>
-              <label>Username: </label>
-              <input
-                type="text"
-                name="username"
-                value={this.state.username}
-                onChange={this.onChange}
-              ></input>
-              <button type="submit">Login</button>
-            </form>
-          </div>
-        </div>
-      );
+    let username = "";
+    const location = this.props.location;
+    if (location) {
+      if (location.state) {
+        if (location.state.user) {
+          username = location.state.user;
+        }
+      }
     }
     return (
       <div>
         <div className="loginButton">
-          {this.state.authenticated ? (
-            this.state.username
-          ) : (
-            <button onClick={this.login}>Login</button>
-          )}
+          {username.length > 0 ? username : <Link to="/login">Login</Link>}
         </div>
         <div className="title">Image Quiz</div>
+        {this.body()}
         <div className="images">
           <img
             src={require("./images/cherryblossom.png")}
