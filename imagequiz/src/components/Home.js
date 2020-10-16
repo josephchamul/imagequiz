@@ -43,7 +43,13 @@ class Home extends React.Component {
     return (
       <div>
         <div className="loginButton">
-          {username.length > 0 ? username : <Link to="/login">Login</Link>}
+          {username.length > 0 ? (
+            username
+          ) : (
+            <Link to="/login" className="button">
+              Login
+            </Link>
+          )}
         </div>
         <div className="title">Image Quiz</div>
         {this.body()}
