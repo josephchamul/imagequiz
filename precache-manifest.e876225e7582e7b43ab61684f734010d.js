@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "51af65a0d21eea5e8ca5a70fff531283",
+    "revision": "86c43d90ba51c0288f8eebd623529a87",
     "url": "/imagequiz/index.html"
   },
   {
-    "revision": "414c5d64c041392c3a05",
-    "url": "/imagequiz/static/css/main.c4cc9d17.chunk.css"
+    "revision": "dc55eaf425c4f43a873b",
+    "url": "/imagequiz/static/css/main.8cb4581c.chunk.css"
   },
   {
-    "revision": "e3d8992116123d5fff3b",
-    "url": "/imagequiz/static/js/2.a068b877.chunk.js"
+    "revision": "9fa939279cf12c3f7749",
+    "url": "/imagequiz/static/js/2.1056e4a4.chunk.js"
   },
   {
-    "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/imagequiz/static/js/2.a068b877.chunk.js.LICENSE.txt"
+    "revision": "c64c486544348f10a6d6c716950bc223",
+    "url": "/imagequiz/static/js/2.1056e4a4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "414c5d64c041392c3a05",
-    "url": "/imagequiz/static/js/main.2aab270c.chunk.js"
+    "revision": "dc55eaf425c4f43a873b",
+    "url": "/imagequiz/static/js/main.2707e096.chunk.js"
   },
   {
     "revision": "85da51fa7abe07fb0938",
